@@ -73,7 +73,7 @@ def round_step_size(
     return float(quantity - quantity % Decimal(str(step_size)))
 
 
-def convert_ts_str(ts_str):
+def convert_ts_str(ts_str: Union[str, int, None]) -> Optional[int]:
     if ts_str is None:
         return ts_str
     if type(ts_str) == int:
