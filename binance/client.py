@@ -630,6 +630,7 @@ class Client(BaseClient):
                 # or equal than an hour and the result set should contain at
                 # least one trade.
                 start_ts = convert_ts_str(start_str)
+                assert start_ts is not None
                 # If the resulting set is empty (i.e. no trades in that interval)
                 # then we just move forward hour by hour until we find at least one
                 # trade or reach present moment
